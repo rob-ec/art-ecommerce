@@ -1,7 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import PageHeader from './components/PageHeader.vue';
+</script>
 
 <template>
-  <h1>Art e-Commerce</h1>
+  <div class="flex flex-col bg-white dark:bg-gray-600 min-h-screen">
+    <PageHeader />
+    <div class="">
+      <router-view />
+    </div>
+  </div>
 </template>
-
-<style scoped></style>
