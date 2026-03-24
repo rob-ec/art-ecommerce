@@ -4,6 +4,7 @@ import ProductsPage from '@/views/ProductsPage.vue'
 import NotFound from '@/views/NotFound.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import SingleProductPage from '@/views/SingleProductPage.vue'
+import CategoriesPage from '@/views/CategoriesPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
       path: '/product/:id',
       name: 'Produto',
       component: SingleProductPage,
+    },
+    {
+      path: '/categories',
+      name: 'Categorias',
+      component: CategoriesPage,
     },
     {
       path: '/:pathMatch(.*)*',
