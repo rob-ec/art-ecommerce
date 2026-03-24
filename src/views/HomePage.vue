@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import banner1 from '@/assets/imgs/webp/vista_bolsa_palha_macrame_litoral_1.webp'
 import SectionStandard from '@/components/SectionStandard.vue'
+import SearchInput from '@/components/SearchInput.vue'
+import FilterDropdown from '@/components/FilterDropdown.vue'
 </script>
 
 <template>
@@ -21,6 +23,10 @@ import SectionStandard from '@/components/SectionStandard.vue'
     </section>
     <section class="bg-palette-gray-light h-[80vh] px-30.5">
       <SectionStandard title="Produtos" />
+      <div class="flex gap-2">
+        <SearchInput title="Buscar" />
+        <FilterDropdown title="Categorias" />
+      </div>
     </section>
   </main>
 </template>

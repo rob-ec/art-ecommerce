@@ -10,6 +10,6 @@ const props = defineProps<{
       {{ props.title }}
     </h2>
 
-    <hr class="border-palette-orange" />
+    <hr class="border-palette-orange mb-[10px]" />
   </div>
 </template>
