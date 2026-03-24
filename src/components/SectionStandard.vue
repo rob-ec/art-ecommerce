@@ -10,6 +10,6 @@ const props = defineProps<{
       {{ props.title }}
     </h2>
 
-    <hr class="border-palette-orange w-[50vw] mx-auto" />
+    <hr class="border-palette-orange" />
   </div>
 </template>

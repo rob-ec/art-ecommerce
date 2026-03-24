@@ -13,13 +13,13 @@ import SectionStandard from '@/components/SectionStandard.vue'
         class="w-full"
       />
     </section>
-    <section class="bg-palette-cream h-[80vh]">
+    <section class="bg-palette-cream h-[80vh] px-30.5">
       <SectionStandard title="Em destaque" />
     </section>
-    <section class="bg-palette-gray-light h-[80vh]">
+    <section class="bg-palette-gray-light h-[80vh] px-30.5">
       <SectionStandard title="Categorias" />
     </section>
-    <section class="bg-palette-gray-light h-[80vh]">
+    <section class="bg-palette-gray-light h-[80vh] px-30.5">
       <SectionStandard title="Produtos" />
     </section>
   </main>
