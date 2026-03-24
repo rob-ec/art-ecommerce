@@ -1,22 +1,71 @@
 <script setup lang="ts">
+import RatingStars from '@/components/RatingStars.vue'
+import TagInfo from '@/components/TagInfo.vue'
 import { useProduct } from '@/stores/single-product'
 import { storeToRefs } from 'pinia'
-import { onMounted } from 'vue'
+import { defineComponent, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import ButtonBuy from './ButtonBuy.vue'
+import ButtonAddToCart from './ButtonAddToCart.vue'
 
 const route = useRoute()
 const store = useProduct()
 const { product, error } = storeToRefs(store)
 
-onMounted(() => {
-  store.fetchProduct(route.params.id as string)
+watch(
+  () => route.params.id,
+  (newId) => {
+    if (newId) {
+      store.fetchProduct(newId as string)
+    }
+  },
+  { immediate: true },
+)
+
+defineComponent({
+  components: {
+    ButtonAddToCart,
+    ButtonBuy,
+    RatingStars,
+    TagInfo,
+  },
 })
 </script>
 
 <template>
-  <div v-if="error">{{ error }}</div>
+  <main class="px-30.5 py-10">
+    <div v-if="error">{{ error }}</div>
 
-  <div v-if="product">
-    <h1>{{ product.title }}</h1>
-  </div>
+    <div v-if="product" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-gray-900">
+      <div class="flex flex-col col-span-1 lg:col-span-2 justify-start align-center p-0 rounded-xl overflow-hidden gap-4">
+        <div class="flex justify-center max-h-120 p-0">
+          <img :src="product.image" class="rounded-xl h-full object-contain" />
+        </div>
+        <div class="flex flex-row gap-3">
+          <div class="aspect-square bg-palette-white w-16 md:w-24 rounded-xl border border-palette-gray" v-for="item in 3" :key="item"></div>
+          <div class="aspect-square bg-palette-gray w-16 md:w-24 rounded-xl border border-palette-white"></div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-1">
+          <RatingStars :rating="product.rating" />
+          <h1 class="text-2xl font-semibold">{{ product.title }}</h1>
+        </div>
+        <div class="flex flex-col gap-1">
+          <p class="text-xs text-gray-500 line-through">{{ product.oldPriceFormatted }}</p>
+          <h2 class="text-2xl">{{ product.priceFormatted }}</h2>
+          <p class="text-xs">{{ product.discountPercentage }}% OFF</p>
+          <TagInfo>Frete Grátis</TagInfo>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h3 class="font-semibold">Descrição</h3>
+          <p class="text-lg font-light">{{ product.description }}</p>
+        </div>
+        <div class="flex flex-col gap-2 w-fit">
+          <ButtonAddToCart>Adicionar ao carrinho</ButtonAddToCart>
+          <ButtonBuy>Comprar agora</ButtonBuy>
+        </div>
+      </div>
+    </div>
+  </main>
 </template>
