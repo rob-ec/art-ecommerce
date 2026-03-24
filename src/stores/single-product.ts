@@ -4,7 +4,7 @@ import { defineStore } from 'pinia'
 
 import products from '@/mock/products.json'
 
-export const useProduct = defineStore('products', {
+export const useProduct = defineStore('product', {
   state: () => ({
     product: null as Product | null,
     error: null as string | null,
