@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import banner1 from '@/assets/imgs/webp/vista_bolsa_palha_macrame_litoral_1.webp'
+import SectionStandard from '@/components/SectionStandard.vue'
 </script>
 
 <template>
@@ -13,36 +14,13 @@ import banner1 from '@/assets/imgs/webp/vista_bolsa_palha_macrame_litoral_1.webp
       />
     </section>
     <section class="bg-palette-cream h-[80vh]">
-      <div>
-        <h2
-          class="text-3xl font-regular text-palette-orange text-center pt-[80px] pb-[20px] uppercase"
-        >
-          Em destaque
-        </h2>
-        <hr class="border-palette-orange w-[50vw] mx-auto" />
-      </div>
+      <SectionStandard title="Em destaque" />
     </section>
     <section class="bg-palette-gray-light h-[80vh]">
-      <div>
-        <h2
-          class="text-3xl font-regular text-palette-orange text-center pt-[80px] pb-[20px] uppercase"
-        >
-          Categorias
-        </h2>
-        <hr class="border-palette-orange w-[50vw] mx-auto" />
-      </div>
-      <article></article>
+      <SectionStandard title="Categorias" />
     </section>
     <section class="bg-palette-gray-light h-[80vh]">
-      <div>
-        <h2
-          class="text-3xl font-regular text-palette-orange text-center pt-[80px] pb-[20px] uppercase"
-        >
-          Produtos
-        </h2>
-        <hr class="border-palette-orange w-[50vw] mx-auto" />
-      </div>
-      <article></article>
+      <SectionStandard title="Produtos" />
     </section>
   </main>
 </template>
