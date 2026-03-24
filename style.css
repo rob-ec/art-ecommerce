@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@theme {
+  --color-palette-brown: #8C4A2F;
+  --color-palette-orange: #D97A2B;
+  --color-palette-yellow: #F2B705;
+  --color-palette-cream: #F2E3C6;
+  --color-palette-green: #4F6D3A;
+  --color-palette-green-light: #00D615;
+  --color-palette-gray: #3E6B48;
+  --color-palette-gray-dark: #D9D9D9;
+  --color-palette-gray-light: #F5F5F5;
+  --color-palette-white: #FFFFFF;
+}
