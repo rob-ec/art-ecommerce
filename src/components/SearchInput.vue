@@ -14,7 +14,7 @@ const props = defineProps<{
       name="search"
       id="search"
       :placeholder="props.title"
-      class="pl-8 text-palette-orange border-1 border-solid border-palette-orange rounded-[8px] py-[2px] px-[10px]"
+      class="pl-8 text-palette-orange border-1 border-solid border-palette-orange rounded-[8px] py-[2px] px-[10px] outline-none"
     />
   </div>
 </template>
