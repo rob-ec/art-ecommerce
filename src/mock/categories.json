@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "_id": 1,
+      "name": "Palha e fibras naturais",
+      "slug": "palha-e-fibras-naturais",
+      "description": "Lorem impsum.",
+      "image": "categories/icon-ceramica-barro-escultura.svg",
+      "theme": "brown"
+    },
+    {
+      "_id": 2,
+      "name": "Cerâmica e barro",
+      "slug": "ceramica-e-barro",
+      "description": "Lorem impsum.",
+      "image": "categories/icon-ceramica-barro-escultura.svg",
+      "theme": "cream"
+    },
+    {
+      "_id": 3,
+      "name": "Couro e madeira",
+      "slug": "couro-e-madeira",
+      "description": "Lorem impsum.",
+      "image": "categories/icon-couro-madeira.svg",
+      "theme": "brown"
+    },
+    {
+      "_id": 4,
+      "name": "Litoral",
+      "slug": "litoral",
+      "description": "Lorem impsum.",
+      "image": "categories/icon-litoral.svg",
+      "theme": "cream"
+    }
+  ],
+  "totalCategories": 4,
+  "totalPages": 1,
+  "currentPage": 1,
+  "perPage": 20
+}
