@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import CategoryList from '@/components/CategoryList.vue'
+import SectionStandard from '@/components/SectionStandard.vue'
+</script>
 <template>
-<h1>Página de categorias</h1>
+  <main class="bg-palette-white dark:bg-palette-gray min-h-100vh px-30.5">
+    <SectionStandard title="Categorias" />
+    <CategoryList class="bg-palette-white dark:bg-palette-gray" />
+  </main>
 </template>

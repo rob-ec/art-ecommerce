@@ -6,9 +6,9 @@ defineComponent({
   components: {
     ProductList,
   },
-});
+})
 </script>
 
 <template>
-  <ProductList />
+  <ProductList :category="String($route.query.category || '')" />
 </template>
