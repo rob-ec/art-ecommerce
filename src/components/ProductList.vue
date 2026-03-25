@@ -14,9 +14,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <h2>Nossos Produtos</h2>
-    <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+  <div class = "bg-palette-gray">
+    <h2 class = "text-center mt-20">Nossos Produtos</h2>
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 p-30.5">
       <ProductCard v-for="product in products" :product="product" :key="product.key" />
     </div>
   </div>

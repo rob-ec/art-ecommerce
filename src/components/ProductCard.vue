@@ -1,8 +1,10 @@
 <script lang="ts">
 import { Product } from '@/model/Product'
 import { defineComponent } from 'vue'
+import  TagInfo  from "./TagInfo.vue"
 
 export default defineComponent({
+  components : { TagInfo },
   props: {
     product: {
       type: Product,
@@ -24,17 +26,17 @@ export default defineComponent({
 
 <template>
   <RouterLink :to="`/product/${id}`">
-    <article class="product">
+    <article class="text-gray-900 bg-palette-white p-4 rounded-2xl">
       <div class="">
         <figure class="">
-          <img :src="image" :alt="title" class="" />
+          <img :src="image" :alt="title" class="rounded-xl" />
         </figure>
       </div>
-      <div class="">
-        <h1 class="text-xl mb-2">{{ title }}</h1>
-        <p class="" v-if="price">{{ price }}</p>
-        <p class="">{{ discountPercentage }}</p>
-        <p class="" v-if="hasFreeShipping">Frete Grátis</p>
+      <div class="mt-3">
+        <h1 class="text-xl font-semibold mb-4">{{ title }}</h1>
+        <p class="text-2xl" v-if="price">{{ price }}</p>
+        <p class="text-xs mt-2">{{ discountPercentage }}</p>
+        <TagInfo class="mt-3" v-if="hasFreeShipping">Frete Grátis</TagInfo>
       </div>
     </article>
   </RouterLink>
