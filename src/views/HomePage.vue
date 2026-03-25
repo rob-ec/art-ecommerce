@@ -1,5 +1,32 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import banner1 from '@/assets/imgs/webp/vista_bolsa_palha_macrame_litoral_1.webp'
+import SectionStandard from '@/components/SectionStandard.vue'
+import SearchInput from '@/components/SearchInput.vue'
+import FilterDropdown from '@/components/FilterDropdown.vue'
+</script>
 
 <template>
-  <h1>Code a Home Aqui</h1>
+  <main>
+    <section>
+      <img
+        :src="banner1"
+        alt="Banner com bolsa de palha e macramé da coleção
+      Nord Art"
+        class="w-full"
+      />
+    </section>
+    <section class="bg-palette-cream h-[80vh] px-30.5">
+      <SectionStandard title="Em destaque" />
+    </section>
+    <section class="bg-palette-gray-light h-[80vh] px-30.5">
+      <SectionStandard title="Categorias" />
+    </section>
+    <section class="bg-palette-gray-light h-[80vh] px-30.5">
+      <SectionStandard title="Produtos" />
+      <div class="flex gap-2">
+        <SearchInput title="Buscar" />
+        <FilterDropdown title="Categorias" />
+      </div>
+    </section>
+  </main>
 </template>
