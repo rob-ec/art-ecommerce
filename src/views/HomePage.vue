@@ -7,6 +7,8 @@ import iconLitoral from '@/assets/imgs/svg/icon-litoral.svg'
 import SectionStandard from '@/components/SectionStandard.vue'
 import SearchInput from '@/components/SearchInput.vue'
 import FilterDropdown from '@/components/FilterDropdown.vue'
+import FeaturedProducts  from '@/components/FeaturedProducts.vue'
+
 </script>
 
 <template>
@@ -19,8 +21,9 @@ import FilterDropdown from '@/components/FilterDropdown.vue'
         class="w-full"
       />
     </section>
-    <section class="bg-palette-cream h-[80vh] px-30.5">
+    <section class="bg-palette-cream min-h-[80vh] lg:px-30.5 pb-30">
       <SectionStandard title="Em destaque" />
+      <FeaturedProducts class="px-30"/>
     </section>
     <section class="bg-palette-gray-light h-[80vh] px-30.5">
       <SectionStandard title="Categorias" />
