@@ -6,7 +6,7 @@ import searchIcon from '@/assets/imgs/svg/search-icon.svg'
 
 <template>
   <div
-    class="bg-palette-white flex items-center px-30.5 py-6 flex-row justify-between border-b border-palette-gray"
+    class="fixed w-full top-0 left-0 z-11 bg-palette-white flex items-center px-30.5 py-6 flex-row justify-between border-b border-palette-gray"
   >
     <RouterLink to="/" class="cursor-pointer">
       <img :src="logo" class="h-10" />
