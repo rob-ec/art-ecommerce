@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="bg-palette-gray pt-10">
+  <div class="pt-10">
     <div class="px-30.5"><SectionStandard title="Produtos" /></div>
     <div class="flex gap-2 px-30.5">
       <SearchInput title="Buscar" />
