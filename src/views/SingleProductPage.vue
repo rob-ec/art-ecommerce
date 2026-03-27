@@ -5,11 +5,12 @@ import { useCartStore } from '@/stores/cart'
 import { useProduct } from '@/stores/single-product'
 import { storeToRefs } from 'pinia'
 import { watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import ButtonAddToCart from './ButtonAddToCart.vue'
 import ButtonBuy from './ButtonBuy.vue'
 
 const route = useRoute()
+const router = useRouter()
 const store = useProduct()
 const cartStore = useCartStore()
 const { product, error } = storeToRefs(store)
@@ -23,6 +24,12 @@ watch(
   },
   { immediate: true },
 )
+
+function buyNow() {
+  cartStore.clear()
+  cartStore.add(product.value!)
+  router.push('/checkout')
+}
 </script>
 
 <template>
@@ -64,7 +71,7 @@ watch(
         </div>
         <div class="flex flex-col gap-2 w-fit">
           <ButtonAddToCart @click="cartStore.add(product!)">Adicionar ao carrinho</ButtonAddToCart>
-          <ButtonBuy>Comprar agora</ButtonBuy>
+          <ButtonBuy @click="buyNow">Comprar agora</ButtonBuy>
         </div>
       </div>
     </div>
