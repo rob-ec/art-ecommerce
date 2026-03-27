@@ -5,7 +5,7 @@ import banner2 from '@/assets/imgs/png/banner2-homepage.png'
 import SectionStandard from '@/components/SectionStandard.vue'
 import FeaturedProducts from '@/components/FeaturedProducts.vue'
 import CategoryList from '@/components/CategoryList.vue'
-import arrowIcon from '@/assets/icons/icon-arrow-right.svg'
+import arrowIcon from '@/assets/imgs/svg/Icon-arrow-right.svg'
 </script>
 
 <template>
