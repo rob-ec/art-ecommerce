@@ -13,10 +13,11 @@ onMounted(() => {
 })
 </script>
 <template>
-  <section class="bg-palette-gray-light min-h-80vh p-20 lg:px-30.5">
-    <SectionStandard title="Categorias" />
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-2">
-      <CategoryCard v-for="category in categories" :category="category" :key="category.key" />
+  <section class="py-8">
+    <div class="max-w-screen-xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <CategoryCard v-for="category in categories" :category="category" :key="category.key" />
+      </div>
     </div>
   </section>
 </template>

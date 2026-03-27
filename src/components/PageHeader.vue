@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import logo from '@/assets/imgs/svg/logo-nord-art-header.svg'
-import cartIcon from '@/assets/imgs/svg/cart-icon.svg'
+import logo from '@/assets/imgs/png/logo-nord-art-header.png'
 import searchIcon from '@/assets/imgs/svg/search-icon.svg'
+import CartComponent from './CartComponent.vue'
 </script>
 
 <template>
-  <div class="bg-palette-gray-light flex items-center px-30.5 py-6 flex-row justify-between">
+  <div
+    class="fixed w-full top-0 left-0 z-11 bg-palette-white flex items-center px-30.5 py-6 flex-row justify-between border-b border-palette-gray"
+  >
     <RouterLink to="/" class="cursor-pointer">
       <img :src="logo" class="h-10" />
     </RouterLink>
@@ -21,8 +23,8 @@ import searchIcon from '@/assets/imgs/svg/search-icon.svg'
       </RouterLink>
     </nav>
     <div class="flex gap-5">
-      <img :src="searchIcon" class="w-5 h-5"/>
-      <img :src="cartIcon" class="w-5 h-5"/>
+      <img :src="searchIcon" class="w-5 h-5" />
+      <CartComponent />
     </div>
   </div>
 </template>

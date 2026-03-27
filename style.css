@@ -1,15 +1,24 @@
-@import "tailwindcss";
-@import "primeicons/primeicons.css";
+@import 'tailwindcss';
+@import 'primeicons/primeicons.css';
+
+@font-face {
+  font-family: 'Bahiana';
+  src: url('@/assets/fonts/Bahiana-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 @theme {
-  --color-palette-brown: #8C4A2F;
-  --color-palette-orange: #D97A2B;
-  --color-palette-yellow: #F2B705;
-  --color-palette-cream: #F2E3C6;
-  --color-palette-green: #4F6D3A;
-  --color-palette-green-light: #00D615;
-  --color-palette-gray: #E5E5E5;
-  --color-palette-gray-dark: #D9D9D9;
-  --color-palette-gray-light: #F5F5F5;
-  --color-palette-white: #FFFFFF;
+  --color-palette-brown: #8c4a2f;
+  --color-palette-orange: #d97a2b;
+  --color-palette-yellow: #f2b705;
+  --color-palette-cream: #fefae0;
+  --color-palette-cream-dark: #f8f4db;
+  --color-palette-green: #4f6d3a;
+  --color-palette-green-light: #d8e6a6;
+  --color-palette-gray: #e5e5e5;
+  --color-palette-gray-dark: #d9d9d9;
+  --color-palette-gray-light: #f5f5f5;
+  --color-palette-white: #ffffff;
+  --color-palette-black: #000000;
 }
