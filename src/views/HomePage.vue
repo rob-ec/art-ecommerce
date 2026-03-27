@@ -5,7 +5,7 @@ import banner2 from '@/assets/imgs/png/banner2-homepage.png'
 import SectionStandard from '@/components/SectionStandard.vue'
 import FeaturedProducts from '@/components/FeaturedProducts.vue'
 import CategoryList from '@/components/CategoryList.vue'
-import arrowIcon from '@/assets/imgs/svg/icon-arrow-right.svg'
+import arrowIcon from '@/assets/icons/icon-arrow-right.svg'
 </script>
 
 <template>
@@ -31,7 +31,7 @@ import arrowIcon from '@/assets/imgs/svg/icon-arrow-right.svg'
         </div>
         <router-link
           to="/products"
-          class="inline-block text-palette-cream bg-palette-brown px-[32px] py-[16px] rounded-4xl w-fit"
+          class="inline-block text-palette-cream bg-palette-brown px-6 py-3 rounded-[16px] w-fit"
         >
           Conheça a Coleção
         </router-link>
@@ -86,7 +86,7 @@ import arrowIcon from '@/assets/imgs/svg/icon-arrow-right.svg'
             </p>
             <router-link
               to="/about"
-              class="text-palette-cream-dark bg-palette-green px-[32px] py-[16px] rounded-4xl w-fit"
+              class="text-palette-cream-dark bg-palette-green px-6 py-3 rounded-[16px] w-fit"
             >
               Conheça nosso projeto
             </router-link>
