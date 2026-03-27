@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import RatingStars from '@/components/RatingStars.vue'
 import TagInfo from '@/components/TagInfo.vue'
+import { useCartStore } from '@/stores/cart'
 import { useProduct } from '@/stores/single-product'
 import { storeToRefs } from 'pinia'
-import { defineComponent, watch } from 'vue'
+import { watch } from 'vue'
 import { useRoute } from 'vue-router'
-import ButtonBuy from './ButtonBuy.vue'
 import ButtonAddToCart from './ButtonAddToCart.vue'
+import ButtonBuy from './ButtonBuy.vue'
 
 const route = useRoute()
 const store = useProduct()
+const cartStore = useCartStore()
 const { product, error } = storeToRefs(store)
 
 watch(
@@ -21,15 +23,6 @@ watch(
   },
   { immediate: true },
 )
-
-defineComponent({
-  components: {
-    ButtonAddToCart,
-    ButtonBuy,
-    RatingStars,
-    TagInfo,
-  },
-})
 </script>
 
 <template>
@@ -70,7 +63,7 @@ defineComponent({
           <p class="text-lg font-light">{{ product.description }}</p>
         </div>
         <div class="flex flex-col gap-2 w-fit">
-          <ButtonAddToCart>Adicionar ao carrinho</ButtonAddToCart>
+          <ButtonAddToCart @click="cartStore.add(product!)">Adicionar ao carrinho</ButtonAddToCart>
           <ButtonBuy>Comprar agora</ButtonBuy>
         </div>
       </div>
