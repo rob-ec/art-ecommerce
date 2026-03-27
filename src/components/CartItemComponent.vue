@@ -30,8 +30,8 @@ export default defineComponent({
 <template>
   <article class="bg-white text-gray-900 rounded-[16px] flex flex-row gap-2.5 p-0 overflow-hidden">
     <div class="flex basis-112.5 flex-row gap-5 overflow-hidden">
-      <figure class="items-center bg-white flex basis-25 h-25 justify-center w-25">
-        <img :src="('/' + image)" :alt="title" class="max-h-25 max-w-25" />
+      <figure class="items-center bg-white flex basis-50 h-25 justify-center w-50">
+        <img :src="('/' + image)" :alt="title" class="w-full h-full object-cover" />
       </figure>
       <h2 class="basis-62.5 font-bold self-center">
         {{ title }}
