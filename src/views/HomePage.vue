@@ -11,7 +11,7 @@ import arrowIcon from '@/assets/imgs/svg/icon-arrow-right.svg'
 <template>
   <main class="bg-palette-cream">
     <section
-      class="relative flex flex-row w-full h-full px-30.5 py-[100px] items-center justify-between"
+      class="relative flex flex-row w-full h-full px-30.5 py-[64px] items-center justify-between"
     >
       <img
         :src="xilogravura"

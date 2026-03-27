@@ -5,6 +5,7 @@ import NotFound from '@/views/NotFound.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import SingleProductPage from '@/views/SingleProductPage.vue'
 import CategoriesPage from '@/views/CategoriesPage.vue'
+import CheckOutPage from '@/components/CheckOutPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
       path: '/categories',
       name: 'Categorias',
       component: CategoriesPage,
+    },
+    {
+      path: '/checkout',
+      name: 'Checkout',
+      component: CheckOutPage,
     },
     {
       path: '/:pathMatch(.*)*',

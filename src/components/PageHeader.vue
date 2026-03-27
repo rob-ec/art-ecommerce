@@ -24,7 +24,9 @@ import searchIcon from '@/assets/imgs/svg/search-icon.svg'
     </nav>
     <div class="flex gap-5">
       <img :src="searchIcon" class="w-5 h-5" />
-      <img :src="cartIcon" class="w-5 h-5" />
+      <RouterLink to="/checkout">
+        <img :src="cartIcon" class="w-5 h-5" />
+      </RouterLink>
     </div>
   </div>
 </template>
