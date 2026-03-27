@@ -25,6 +25,11 @@ watch(
   { immediate: true },
 )
 
+function addToCart() {
+  cartStore.add(product.value!)
+  cartStore.presentCart()
+}
+
 function buyNow() {
   cartStore.clear()
   cartStore.add(product.value!)
@@ -70,7 +75,7 @@ function buyNow() {
           <p class="text-lg font-light">{{ product.description }}</p>
         </div>
         <div class="flex flex-col gap-2 w-fit">
-          <ButtonAddToCart @click="cartStore.add(product!)">Adicionar ao carrinho</ButtonAddToCart>
+          <ButtonAddToCart @click="addToCart">Adicionar ao carrinho</ButtonAddToCart>
           <ButtonBuy @click="buyNow">Comprar agora</ButtonBuy>
         </div>
       </div>

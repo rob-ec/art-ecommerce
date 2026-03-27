@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useCartStore } from '@/stores/cart'
 import CartItemComponent from './CartItemComponent.vue'
 import type { Product } from '@/model/Product'
 import { formatCurrency } from '@/utils/formatCurrency'
 import cartIcon from '@/assets/icons/cart-icon.svg'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const cartStore = useCartStore()
 const {
   list: productList,
@@ -14,16 +16,15 @@ const {
   totalAmount,
   totalAmountWithDiscount,
   economy: economyAmount,
+  showCart,
 } = storeToRefs(cartStore)
 
-const showCart = ref(false)
-
 function openCart() {
-  showCart.value = true
+  cartStore.presentCart()
 }
 
 function closeCart() {
-  showCart.value = false
+  cartStore.hideCart()
 }
 
 function addItem(product: Product) {
@@ -36,6 +37,11 @@ function removeItem(product: Product) {
 
 function deleteItem(product: Product) {
   cartStore.delete(product)
+}
+
+function gotToCheckout() {
+  cartStore.hideCart()
+  router.push('/checkout')
 }
 
 const totalPrice = computed(() => formatCurrency(totalAmount.value))
@@ -93,12 +99,12 @@ const economy = computed(() => formatCurrency(economyAmount.value))
           @delete-item="deleteItem(item.product)"
         />
         <div v-if="productList.length > 0">
-          <RouterLink
-            to="/checkout"
+          <div
+            @click="gotToCheckout"
             class="mt-4 inline-block w-full text-center bg-palette-green text-palette-white py-3 rounded-[16px] font-bold hover:bg-palette-green/90 transition-colors"
           >
             Finalizar Compra
-          </RouterLink>
+          </div>
         </div>
       </section>
     </aside>
