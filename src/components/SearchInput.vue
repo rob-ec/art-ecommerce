@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import searchIconLight from '@/assets/imgs/svg/search-icon-light.svg'
+import searchIconLight from '@/assets/imgs/svg/search-icon.svg'
 
 const props = defineProps<{
   title: string
@@ -14,7 +14,7 @@ const props = defineProps<{
       name="search"
       id="search"
       :placeholder="props.title"
-      class="pl-8 text-palette-orange border-1 border-solid border-palette-orange rounded-[8px] py-[2px] px-[10px] outline-none"
+      class="pl-8 text-palette-brown border-1 border-solid border-palette-brown rounded-[8px] py-[2px] px-[10px] outline-none"
     />
   </div>
 </template>

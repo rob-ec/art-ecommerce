@@ -1,10 +1,10 @@
 <script lang="ts">
 import { Product } from '@/model/Product'
 import { defineComponent } from 'vue'
-import  TagInfo  from "./TagInfo.vue"
+import TagInfo from './TagInfo.vue'
 
 export default defineComponent({
-  components : { TagInfo },
+  components: { TagInfo },
   props: {
     product: {
       type: Product,
@@ -26,7 +26,9 @@ export default defineComponent({
 
 <template>
   <RouterLink :to="`/product/${id}`">
-    <article class="text-gray-900 bg-palette-white p-4 rounded-2xl">
+    <article
+      class="text-gray-900 bg-palette-cream-dark border border-palette-green p-4 rounded-2xl"
+    >
       <div class="">
         <figure class="">
           <img :src="image" :alt="title" class="rounded-xl" />
