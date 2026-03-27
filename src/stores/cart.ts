@@ -33,7 +33,8 @@ function loadCartFromStorage(): Cart {
 
 export const useCartStore = defineStore('cart', {
   state: () => ({
-    cart: loadCartFromStorage()
+    cart: loadCartFromStorage(),
+    showCart: false,
   }),
 
   getters: {
@@ -63,6 +64,12 @@ export const useCartStore = defineStore('cart', {
     clear() {
       this.cart.clear()
       this.saveCart()
-    }
+    },
+    presentCart() {
+      this.showCart = true
+    },
+    hideCart() {
+      this.showCart = false
+    },
   }
 })
