@@ -29,7 +29,7 @@ export default defineComponent({
     <article class="text-gray-900 bg-palette-white p-4 rounded-2xl">
       <div class="">
         <figure class="">
-          <img :src="image" :alt="title" class="rounded-xl" />
+          <img :src="('/' + image)" :alt="title" class="rounded-xl" />
         </figure>
       </div>
       <div class="mt-3">
