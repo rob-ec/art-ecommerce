@@ -46,17 +46,17 @@ function buyNow() {
 </script>
 
 <template>
-  <main class="px-30.5 py-[100px]">
+  <main class="px-30.5 py-25">
     <div v-if="error">{{ error }}</div>
 
     <div v-if="product" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-gray-900">
       <div
         class="flex flex-col col-span-1 lg:col-span-2 justify-start align-center p-0 rounded-xl overflow-hidden gap-4"
       >
-        <div class="flex justify-center max-h-120 p-0">
+        <div class="flex justify-center h-120 max-h-120 p-0">
           <img :src="`/${mainImage}`" :alt="product.title" class="rounded-xl h-full object-contain" />
         </div>
-        <div class="flex flex-row gap-3">
+        <div class="flex flex-row gap-3 align-center justify-center">
           <div
             class="aspect-square bg-palette-white w-16 md:w-24 rounded-xl border border-palette-gray cursor-pointer hover:border-palette-brown transition-colors"
             v-for="galleryItem in product.gallery"
