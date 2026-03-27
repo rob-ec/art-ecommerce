@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import searchIconLight from '@/assets/imgs/svg/search-icon.svg'
+import searchIconLight from '@/assets/icons/search-icon.svg'
 
 const props = defineProps<{
   title: string

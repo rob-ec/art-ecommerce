@@ -31,7 +31,7 @@ import arrowIcon from '@/assets/imgs/svg/Icon-arrow-right.svg'
         </div>
         <router-link
           to="/products"
-          class="inline-block text-palette-cream bg-palette-brown px-[32px] py-[16px] rounded-4xl w-fit"
+          class="inline-block text-palette-cream bg-palette-brown px-6 py-3 rounded-[16px] w-fit"
         >
           Conheça a Coleção
         </router-link>
@@ -86,7 +86,7 @@ import arrowIcon from '@/assets/imgs/svg/Icon-arrow-right.svg'
             </p>
             <router-link
               to="/about"
-              class="text-palette-cream-dark bg-palette-green px-[32px] py-[16px] rounded-4xl w-fit"
+              class="text-palette-cream-dark bg-palette-green px-6 py-3 rounded-[16px] w-fit"
             >
               Conheça nosso projeto
             </router-link>
