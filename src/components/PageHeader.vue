@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import logo from '@/assets/imgs/png/logo-nord-art-header.png'
-import cartIcon from '@/assets/imgs/svg/cart-icon.svg'
 import searchIcon from '@/assets/imgs/svg/search-icon.svg'
+import CartComponent from './CartComponent.vue'
 </script>
 
 <template>
@@ -24,9 +24,7 @@ import searchIcon from '@/assets/imgs/svg/search-icon.svg'
     </nav>
     <div class="flex gap-5">
       <img :src="searchIcon" class="w-5 h-5" />
-      <RouterLink to="/checkout">
-        <img :src="cartIcon" class="w-5 h-5" />
-      </RouterLink>
+      <CartComponent />
     </div>
   </div>
 </template>
