@@ -15,6 +15,7 @@ export interface ProductData {
   brand: string;
   size: string[];
   image: string;
+  gallery: string[];
   rating: number;
 }
 
@@ -33,6 +34,7 @@ export class Product implements ProductData {
     public brand: string,
     public size: string[],
     public image: string,
+    public gallery: string[],
     public rating: number,
   ) {}
 
@@ -75,6 +77,7 @@ export class Product implements ProductData {
       data.brand,
       data.size,
       data.image,
+      data.gallery,
       data.rating,
     );
   }

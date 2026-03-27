@@ -51,12 +51,11 @@ function buyNow() {
         <div class="flex flex-row gap-3">
           <div
             class="aspect-square bg-palette-white w-16 md:w-24 rounded-xl border border-palette-gray"
-            v-for="item in 3"
-            :key="item"
-          ></div>
-          <div
-            class="aspect-square bg-palette-gray w-16 md:w-24 rounded-xl border border-palette-white"
-          ></div>
+            v-for="galleryItem in product.gallery"
+            :key="galleryItem"
+          >
+            <img :src="`/${galleryItem}`" :alt="product.title" class="w-full h-full object-cover rounded-xl" />
+          </div>
         </div>
       </div>
       <div class="flex flex-col gap-5">
