@@ -14,7 +14,7 @@ onMounted(() => {
 </script>
 <template>
   <section class="py-8">
-    <div class="max-w-screen-xl mx-auto">
+    <div class="max-w-screen">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <CategoryCard v-for="category in categories" :category="category" :key="category.key" />
       </div>

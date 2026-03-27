@@ -40,14 +40,13 @@ import arrowIcon from '@/assets/icons/Icon-arrow-right.svg'
         :src="banner1"
         alt="Banner com bolsa de palha e macramé da coleção
       Nord Art"
-        class="w-1/2 flex justify-end"
+        class="w-1/2 flex justify-end z-5"
       />
     </section>
     <section class="bg-palette-cream-dark h-full px-30.5 py-[64px] text-palette-black">
-      <!-- <SectionStandard title="Categorias" /> -->
       <SectionStandard title="Categorias" />
       <div class="text-palette-brown flex flex-row w-full items-center justify-between">
-        <p>Lorem ipsum dolor.</p>
+        <p>O que criamos todos os dias</p>
         <router-link to="/categories" class="flex gap-4 text-palette-brown">
           <p>Ver tudo</p>
           <img :src="arrowIcon" alt="#" />
@@ -58,7 +57,7 @@ import arrowIcon from '@/assets/icons/Icon-arrow-right.svg'
     <section class="h-full px-30.5 py-[64px] pb-30">
       <SectionStandard title="Em destaque" />
       <div class="text-palette-brown flex flex-row w-full items-center justify-between">
-        <p>Lorem ipsum dolor.</p>
+        <p>Nossos best-sellers</p>
         <router-link to="/products" class="flex gap-4 text-palette-brown">
           <p>Ver tudo</p>
           <img :src="arrowIcon" alt="#" />

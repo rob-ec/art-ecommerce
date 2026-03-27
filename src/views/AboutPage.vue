@@ -40,12 +40,12 @@ const membros: Membro[] = [
       <article class="px-[16px] space-y-4">
         <h2 class="text-palette-orange text-3xl uppercase">Problema</h2>
         <p class="text-palette-brown text-base leading-relaxed">
-          Apesar dessa relevância, muitos artesãos enfrentam dificuldades para expandir seus
-          negócios. A comercialização ainda depende, em grande parte, de feiras presenciais,
-          encomendas locais e turismo, o que limita o alcance dos produtos. Além disso, o uso de
-          tecnologias digitais e plataformas de venda online ainda é um desafio para muitos desses
-          profissionais, seja por falta de conhecimento técnico, falta de recursos ou dificuldade de
-          adaptação às ferramentas disponíveis.
+          Apesar da relevância na economia do país, muitos artesãos enfrentam dificuldades para
+          expandir seus negócios. A comercialização ainda depende, em grande parte, de feiras
+          presenciais, encomendas locais e turismo, o que limita o alcance dos produtos. Além disso,
+          o uso de tecnologias digitais e plataformas de venda online ainda é um desafio para muitos
+          desses profissionais, seja por falta de conhecimento técnico, falta de recursos ou
+          dificuldade de adaptação às ferramentas disponíveis.
         </p>
       </article>
 
