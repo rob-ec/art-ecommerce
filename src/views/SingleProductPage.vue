@@ -46,7 +46,7 @@ function buyNow() {
         class="flex flex-col col-span-1 lg:col-span-2 justify-start align-center p-0 rounded-xl overflow-hidden gap-4"
       >
         <div class="flex justify-center max-h-120 p-0">
-          <img :src="product.image" class="rounded-xl h-full object-contain" />
+          <img :src="`/${product.image}`" :alt="product.title" class="rounded-xl h-full object-contain" />
         </div>
         <div class="flex flex-row gap-3">
           <div
