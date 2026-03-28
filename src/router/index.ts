@@ -5,7 +5,7 @@ import NotFound from '@/views/NotFound.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import SingleProductPage from '@/views/SingleProductPage.vue'
 import CategoriesPage from '@/views/CategoriesPage.vue'
-import CheckOutPage from '@/components/CheckOutPage.vue'
+import CheckOutPage from '@/views/CheckOutPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

@@ -5,7 +5,7 @@ import banner2 from '@/assets/imgs/png/banner2-homepage.png'
 import SectionStandard from '@/components/SectionStandard.vue'
 import FeaturedProducts from '@/components/FeaturedProducts.vue'
 import CategoryList from '@/components/CategoryList.vue'
-import arrowIcon from '@/assets/imgs/svg/Icon-arrow-right.svg'
+import arrowIcon from '@/assets/icons/Icon-arrow-right.svg'
 </script>
 
 <template>
@@ -31,7 +31,7 @@ import arrowIcon from '@/assets/imgs/svg/Icon-arrow-right.svg'
         </div>
         <router-link
           to="/products"
-          class="inline-block text-palette-cream bg-palette-brown px-[32px] py-[16px] rounded-4xl w-fit"
+          class="inline-block text-palette-cream bg-palette-brown px-6 py-3 rounded-[16px] w-fit"
         >
           Conheça a Coleção
         </router-link>
@@ -40,14 +40,13 @@ import arrowIcon from '@/assets/imgs/svg/Icon-arrow-right.svg'
         :src="banner1"
         alt="Banner com bolsa de palha e macramé da coleção
       Nord Art"
-        class="w-1/2 flex justify-end"
+        class="w-1/2 flex justify-end z-5"
       />
     </section>
     <section class="bg-palette-cream-dark h-full px-30.5 py-[64px] text-palette-black">
-      <!-- <SectionStandard title="Categorias" /> -->
       <SectionStandard title="Categorias" />
       <div class="text-palette-brown flex flex-row w-full items-center justify-between">
-        <p>Lorem ipsum dolor.</p>
+        <p>O que criamos todos os dias</p>
         <router-link to="/categories" class="flex gap-4 text-palette-brown">
           <p>Ver tudo</p>
           <img :src="arrowIcon" alt="#" />
@@ -58,7 +57,7 @@ import arrowIcon from '@/assets/imgs/svg/Icon-arrow-right.svg'
     <section class="h-full px-30.5 py-[64px] pb-30">
       <SectionStandard title="Em destaque" />
       <div class="text-palette-brown flex flex-row w-full items-center justify-between">
-        <p>Lorem ipsum dolor.</p>
+        <p>Nossos best-sellers</p>
         <router-link to="/products" class="flex gap-4 text-palette-brown">
           <p>Ver tudo</p>
           <img :src="arrowIcon" alt="#" />
@@ -86,7 +85,7 @@ import arrowIcon from '@/assets/imgs/svg/Icon-arrow-right.svg'
             </p>
             <router-link
               to="/about"
-              class="text-palette-cream-dark bg-palette-green px-[32px] py-[16px] rounded-4xl w-fit"
+              class="text-palette-cream-dark bg-palette-green px-6 py-3 rounded-[16px] w-fit"
             >
               Conheça nosso projeto
             </router-link>

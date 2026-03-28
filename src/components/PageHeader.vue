@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import logo from '@/assets/imgs/png/logo-nord-art-header.png'
-import searchIcon from '@/assets/imgs/svg/search-icon.svg'
+import logo from '@/assets/imgs/svg/logo-nordeste-artesao.svg'
+import searchIcon from '@/assets/icons/search-icon.svg'
 import CartComponent from './CartComponent.vue'
 </script>
 
