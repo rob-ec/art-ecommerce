@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import iconMap from '@/assets/icons/Icon-map.svg'
-import iconMail from '@/assets/icons/Icon-mail.svg'
+import iconMail from '@/assets/icons/icon-mail.svg'
 </script>
 
 <template>
